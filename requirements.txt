@@ -1,0 +1,13 @@
+# Main libraries used by the notebooks (run on Google Colab, T4 GPU).
+# Versions were not pinned during the thesis; these are minimum versions known to work.
+torch>=2.0
+torchvision>=0.15
+transformers>=4.30      # CLIP ViT-B/32 and ViT-L/14
+scikit-learn>=1.2       # metrics, gradient-boosting provenance classifier
+numpy
+scipy
+pandas
+Pillow
+matplotlib
+tqdm
+kaggle                  # dataset download (needs a Kaggle API token)

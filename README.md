@@ -8,7 +8,7 @@ shortcut audit, a leakage check, everyday degradations and adversarial attacks.
 Code and results of a Master 2 thesis (Professional Master in Artificial Intelligence, Lebanese University,
 Faculty of Sciences, 2026) on **single-image detection of AI-generated faces**.
 
-📄 **Thesis:** [`thesis/Thesis.pdf`](thesis/Thesis.pdf) · 📊 **Results report:** [`results/Final_Results_Report.pdf`](results/Final_Results_Report.pdf)
+📄 **Full thesis:** [`thesis/Thesis.pdf`](thesis/Thesis.pdf)
 
 ![AUC of each detector on the training generator and on unseen generators](assets/results.png)
 
@@ -126,9 +126,6 @@ StyleGAN and face-swap results are unaffected. All diffusion results reported in
 │   └── results.png                 results chart shown above
 ├── thesis/
 │   └── Thesis.pdf                  final thesis
-├── results/
-│   ├── Final_Results_Report.pdf    results report
-│   └── Final_Results_Report.docx
 └── notebooks/
     ├── 01_B1_frozen_baseline.ipynb … 18_common_test_suite.ipynb   (see the table above)
     └── archive/                    excluded SD v1.4 experiments

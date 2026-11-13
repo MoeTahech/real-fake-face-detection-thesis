@@ -84,7 +84,7 @@ opens in Google Colab from the badge at its top.
 | `02_B2_finetuning` | B2 | ResNet18 with `layer4` unfrozen | 98.8% accuracy, AUC 0.999 |
 | `03_B3_ablation` | B3 | Separates the effect of unfreezing from the effect of the learning rate | unfreezing, not the learning rate, explains the gain |
 | `04_G1_faceswap_transfer` | G1 | B1 and B2 tested on face swaps, no retraining | about 49 to 50% accuracy, AUC about 0.50 |
-| `05_G2_diffusionface_transfer` | G2, R2 | RGB models tested on DiffusionFace, original and JPEG-75 | AUC 0.44 to 0.53 (chance) |
+| `05_G2_diffusionface_transfer` | G2, R2 | RGB models on DiffusionFace (original and JPEG-75) and the DiffusionFace shortcut audit | AUC 0.44 to 0.53 (chance); file facts alone give AUC 0.80 / 0.73 |
 | `06_I1_ensemble` | I1 | EfficientNet-B0 and probability-averaging ensemble | no improvement on unseen domains |
 | `07_I2_frequency_domain` | I2 | ResNet18 trained on FFT spectra | 83.8% on StyleGAN |
 | `08_I2_frequency_diffusionface` | I2, R2 | Frequency model on DiffusionFace | below chance (AUC 0.29 to 0.32) |
@@ -92,7 +92,7 @@ opens in Google Colab from the badge at its top.
 | `10_I4_clip_vitb32` | I4 | Frozen CLIP ViT-B/32 + linear head | 94.4% on StyleGAN, chance on face swaps |
 | `11_I5_clip_vitl14` | I5 | CLIP ViT-L/14 and a ViT-B/32 re-run, final and intermediate layers | AUC 0.58 / 0.57 on DiffusionFace |
 | `12_R1_seeds_and_confidence_intervals` | R1 | Seeds 0, 1, 2 and bootstrap confidence intervals | main effects hold in every seed |
-| `13_R2_shortcut_confound_check` | R2 | File facts, pixel statistics, provenance classifier, normalization test | StyleGAN and face swap are clean |
+| `13_R2_shortcut_confound_check` | R2 | File facts, pixel statistics, provenance classifier, normalization test | StyleGAN and face swap are clean (DiffusionFace audit: notebook 05) |
 | `14_R3_near_duplicate_check` | R3 | Near-duplicate search between face-swap train and test (CLIP similarity) | 0.9% of test images flagged; I3 AUC unchanged |
 | `15_R4_degradation_robustness` | R4 | JPEG, blur, resize, noise, combined "social media" pipeline | fails on strong blur and downscaling |
 | `16_R5_adversarial_robustness` | R5 | FGSM and PGD attacks on B2 | 0% accuracy at epsilon = 0.01 |
@@ -106,7 +106,7 @@ A three-source model trained on it reached a diffusion AUC of 0.998, which was a
 real detection. The dataset was therefore replaced by DiffusionFace, which has its own real images.
 The two notebooks built around SD v1.4 are kept in [`notebooks/archive/`](notebooks/archive/), and notebooks
 07, 10, 12, 13 and 15 still contain an SD v1.4 diffusion section, marked with a note at the top. Their
-StyleGAN and face-swap results are unaffected; the final diffusion results are in notebooks 05, 08, 11 and 18.
+StyleGAN and face-swap results are unaffected. All diffusion results reported in the thesis come from DiffusionFace: notebooks 05 (transfer and the R2 shortcut audit), 08, 11 and 18 (common test suite, including the three-seed results used in R1).
 
 ## Datasets
 

@@ -70,6 +70,8 @@ Produced by notebook `18_common_test_suite`.
   heavy downscaling, and a small white-box adversarial perturbation (epsilon = 0.01) drives
   its accuracy to 0%, also after 8-bit rounding and JPEG compression.
 
+![AUC under JPEG, blur, downscaling and noise](assets/robustness.png)
+
 Conclusion of the thesis: accuracy on the training generator is not evidence of
 generalization, and detectors should be evaluated on generators they have not seen.
 
@@ -123,7 +125,8 @@ StyleGAN and face-swap results are unaffected. All diffusion results reported in
 ├── LICENSE
 ├── requirements.txt
 ├── assets/
-│   └── results.png                 results chart shown above
+│   ├── results.png                 main results chart
+│   └── robustness.png              robustness chart (R4)
 ├── thesis/
 │   └── Thesis_report.pdf           final thesis
 └── notebooks/
